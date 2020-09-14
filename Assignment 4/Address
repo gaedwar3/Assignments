@@ -1,0 +1,62 @@
+/ Assignment #: 4
+// Name: Gaabriel Edwards
+// StudentID: 1216372794
+// Lecture: MWF 8:35-9:25 am 
+
+class Address 
+{
+	private String street;
+	private String city;
+	private String state;
+	
+	//methods 
+	
+	//constructor(s) 
+	public Address()
+	{
+		street = "";
+		city = "";
+		state = "";
+	}
+	
+	// Accessors 
+	public String getStreet()
+	{
+		return street;
+	}
+	
+	public String getCity()
+	{
+		return city;
+	}
+	
+	public String getState()
+	{
+		return state; 
+	}
+	
+	// Mutators
+	
+	public void setStreet(String someStreet)
+	{
+		street = someStreet;
+	}
+	
+	public void setCity(String someCity)
+	{
+		city = someCity;
+	}
+	
+	public void setState(String someState) 
+	{
+		state = someState; 
+	}
+	
+	// toString()
+	public String toString()
+	{
+		String result = "";
+		result = street + ", " + city + ", " + state;
+		return result;
+	}
+}

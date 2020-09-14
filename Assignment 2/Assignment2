@@ -1,0 +1,53 @@
+// Assignment #: 2 
+// 		   Name: Gabriel Edwards
+//   Student ID: 1216372794
+// 		Lecture: MWF: 8:35 - 9:25 am 
+//  Description: A program that reads inputs and finds the largest integer, the number of negative integers 
+//               in the sequence, the largest even integer in the sequence, and sum of numbers divisible by 3 then
+// 				 outputs the results of those calculations once the number 0 is entered 
+
+
+
+import java.util.Scanner; 
+public class Assignment2 {
+
+	public static void main (String [] args) {
+		Scanner scanner = new Scanner(System.in);
+		int number; 
+		int largestInt; 
+		int count = 0;
+		int sum = 0; 
+		int largestEven = 0;
+		int Even = 0; 
+		
+		number = scanner.nextInt();
+		largestInt = number;
+		
+		while (number != 0) { // code runs until 0 is input
+			
+			if (number < 0) // if number is less than 0, then it is added to the count 
+			{
+				count++;
+			}
+			
+			if (number % 2 == 0 && number > largestEven) { // if number is even and larger than the largestEven
+				largestEven = number; // replace largestEven with that number
+			}
+
+			if (number > largestInt) { // if number is greater than the largestInt 
+				largestInt = number;   // largestInt becomes the said number
+			}
+			
+			if (number % 3 == 0) { // if number is divisible by 3
+				sum += number; // the number is added to the sum of other numbers divisible by 3 
+			}
+			
+			number = scanner.nextInt();
+		}
+		System.out.println("The largest integer is " + largestInt);
+		System.out.println("The number of negative integers in the sequence is " + count);
+		System.out.println("The largest even integer in the sequence is " + largestEven);
+		System.out.println("The sum of numbers divisible by 3 is " + sum);
+	}
+	
+}

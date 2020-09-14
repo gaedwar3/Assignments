@@ -1,0 +1,76 @@
+// Assignment #: 4
+// Name: Gaabriel Edwards
+// StudentID: 1216372794
+// Lecture: MWF 8:35-9:25 am 
+class Company 
+{
+	private String name;
+	private int numOfEmployees;
+	private String nameOfCEO;
+	private Address address;
+	
+	//methods
+	
+	//constructor(s) 
+	public Company()
+	{
+		name = "";
+		numOfEmployees = 0;
+		nameOfCEO = "";
+		address = new Address();
+		
+	}
+	
+	// Accessors
+	public String getCompanyName()
+	{
+		return name;
+	}
+	
+	public int getNumOfEmployees()
+	{
+		return numOfEmployees;
+	}
+	
+	public String getNameOfCEO()
+	{
+		return nameOfCEO; 
+					
+	}
+	
+	public Address getAddress()
+	{
+		return address; 
+	}
+	
+	//Mutators
+	public void setCompanyName(String someName)
+	{
+		name = someName;
+	}
+	
+	public void setNumOfEmployees(int someNumber)
+	{
+		numOfEmployees = someNumber; 
+	}
+	
+	public void setNameOfCEO(String someCEO)
+	{
+		nameOfCEO = someCEO;
+	}
+	
+	public void setAddress(String street, String city, String state)
+	{
+		address.setStreet(street);
+		address.setCity(city);
+		address.setState(state);
+	}
+	
+	// toString()
+	public String toString()
+	{
+		String result = "";
+		result = ("\nCompany Name:\t\t" + name + "\n# of Employees:\t\t" + numOfEmployees + "\nName of CEO:\t\t" + nameOfCEO + "\nAddress:\t\t" + address + "\n\n");
+		return result;
+	}
+}
